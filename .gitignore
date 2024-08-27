@@ -3,3 +3,6 @@
 *.jpg
 *.jpeg
 /octave-workspace
+*.tiff
+.DS_Store
+octave-workspace
