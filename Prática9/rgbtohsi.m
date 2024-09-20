@@ -19,12 +19,10 @@ function Saida = rgbtohsi(entrada)
     den = sqrt((R - G).^2 + (R - B).*(G - B));
     theta = acos(num ./ (den + eps));
     
-    H = theta; % Inicialmente, H é igual a theta
+    H = theta;
     
-    % Ajuste para quando B > G
     H(B > G) = 2 * pi - H(B > G);
     
-    % Normaliza H para o intervalo [0, 1]
     H = H / (2 * pi);
     
     % Exibe os canais H, S e I individualmente
